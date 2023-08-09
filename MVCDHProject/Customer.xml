@@ -28,4 +28,18 @@
     <City>Sircilla</City>
     <Status>True</Status>
   </Customer>
+	<Customer>
+		<Custid>105</Custid>
+		<Name>Test</Name>
+		<Balance>15000</Balance>
+		<City>Test</City>
+		<Status>True</Status>
+	</Customer>
+	<Customer>
+		<Custid>106</Custid>
+		<Name>Test2</Name>
+		<Balance>15000</Balance>
+		<City>Test2</City>
+		<Status>True</Status>
+	</Customer>
 </Customers>
