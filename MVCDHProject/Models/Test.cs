@@ -4,5 +4,7 @@
     {
         public int Id { get; set; }
         public int Name { get; set; }
+        public long MobileNumber { get; set; }
+        public string Email { get; set; }
     }
 }
