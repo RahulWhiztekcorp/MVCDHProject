@@ -5,6 +5,31 @@ namespace MVCDHProject.Controllers
 {
     public class XSSAttackController : Controller
     {
+        public IActionResult Index()
+        {
+            return View();
+        }
+        #region Output Encoding for “HTML Contexts”
+        public IActionResult ContextsDecodeIndex()
+        {
+            string name = "Kondi Rahul <br/ > <script> alert(898989); </script>";
+
+            TempData["name"] = name;
+            // Return a view with the encoded name.
+            return View("DecodeIndex");
+        }
+        public IActionResult ContextsEncodeIndex()
+        {
+            string name = "Kondi Rahul <br/ >  <script> alert(898989); </script>";
+
+            // Encode the name for an HTML attribute context.
+            string encodedName = HttpUtility.HtmlEncode(name);
+
+            TempData["name"] = encodedName;
+            // Return a view with the encoded name.
+            return View("EncodeIndex");
+        }
+        #endregion
         #region Output Encoding for “HTML Attribute Contexts”
         public IActionResult DecodeIndex()
         {

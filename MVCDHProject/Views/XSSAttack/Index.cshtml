@@ -1,0 +1,31 @@
+﻿
+<div>
+    <div class="col-7">
+        <h5> Output Encoding for “HTML Contexts”</h5>
+    </div>
+    <div class="col-5">
+        @Html.ActionLink("Decode","ContextsDecodeIndex","XSSAttack",null,new{@class="btn btn-danger p-2"})
+        @Html.ActionLink("Encode","ContextsEncodeIndex","XSSAttack",null,new{@class="btn btn-success p-2"})
+    </div>
+</div>
+<div>
+    <h5> Output Encoding for “HTML Attribute Contexts”</h5>
+    @Html.ActionLink("Decode","DecodeIndex","XSSAttack",null,new{@class="btn btn-danger p-2"});
+    @Html.ActionLink("Encode","EncodeIndex","XSSAttack",null,new{@class="btn btn-success p-2"});
+</div>
+<div>
+    <h5> Output Encoding for “JavaScript Contexts”</h5>
+    @Html.ActionLink("Decode","JavaScriptDecodeIndex","XSSAttack",null,new{@class="btn btn-danger p-2"});
+    @Html.ActionLink("Encode","JavaScriptEncodeIndex","XSSAttack",null,new{@class="btn btn-success p-2"});
+</div>
+<div>
+    <h5> Output Encoding for “CSS Contexts”</h5>
+    @Html.ActionLink("Decode","CSSDecodeIndex","XSSAttack",null,new{@class="btn btn-danger p-2"});
+    @Html.ActionLink("Encode","CSSEncodeIndex","XSSAttack",null,new{@class="btn btn-success p-2"});
+</div>
+<div>
+    <h5> Output Encoding for “URL Contexts”</h5> 
+    @Html.ActionLink("Decode","UrlDecodeIndex","XSSAttack",null,new{@class="btn btn-danger p-2"});
+    @Html.ActionLink("Encode","UrlEncodeIndex","XSSAttack",null,new{@class="btn btn-success p-2"});
+</div>
+
