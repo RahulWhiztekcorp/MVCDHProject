@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Comment>
+<h2 style="text-align:center;background-color:yellowgreen;color:red">Customer Details</h2>
+<table border="1" align="center" class="table table-bordered">
+    <tr>
+        <th>@Html.DisplayNameFor(C => C.ID)</th>
+        <th>@Html.DisplayNameFor(C => C.Name)</th>
+        <th>@Html.DisplayNameFor(C => C.CommentName)</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td align="center">@Html.DisplayFor(C => customer.ID)</td>
+            <td>@Html.Raw(customer.Name)</td>
+            <td>@Html.Raw(customer.CommentName)</td>
+            <td>
+                <a asp-action="DisplayCustomer" asp-route-Custid="@customer.ID">View</a> &nbsp;
+                <a asp-action="EditCustomer" asp-route-Custid="@customer.ID">Edit</a> &nbsp;
+                <a asp-action="DeleteCustomer" asp-route-Custid="@customer.ID" onclick="return confirm('Are you sure of delting the record?')">Delete</a>
+            </td>
+        </tr>
+    }
+    <tr><td colspan="6" align="center"><a asp-action="Create">Add New Customer</a></td></tr>
+</table>

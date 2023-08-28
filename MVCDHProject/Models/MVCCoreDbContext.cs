@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MVCDHProject.Models;
 
 namespace MVCDHProject.Models
 {
@@ -20,6 +21,7 @@ namespace MVCDHProject.Models
                new Customer { Custid = 104, Name = "Samuels", Balance = 25000.00m, City = "Bengaluru", Status = true }
            );
         }
+        public DbSet<MVCDHProject.Models.Comment> Comment { get; set; }
 
     }
 }
