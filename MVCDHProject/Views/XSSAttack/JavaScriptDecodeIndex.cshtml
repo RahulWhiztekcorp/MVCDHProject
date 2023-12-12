@@ -1,7 +1,8 @@
 ﻿
 <h1>You will get the name in console panel @TempData["name"]</h1>
 <script>
-    var name = @Model.name
+    var name = @TempData["name"]
     console.log(name);
 </script>
+@Html.Raw(@TempData["name"])
 @Html.ActionLink("Back to Home","Index","XSSAttack",null,new{@class="btn btn-danger p-2"})

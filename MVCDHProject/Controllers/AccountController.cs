@@ -88,7 +88,7 @@ namespace MVCDHProject.Controllers
                     if (string.IsNullOrEmpty(loginModel.ReturnUrl))
                         return RedirectToAction("Index", "Home");
                     else
-                        return new RedirectResult("https://localhost:44369"+loginModel.ReturnUrl);
+                        return new RedirectToRouteResult("https://localhost:44369"+loginModel.ReturnUrl);
                 }
                 else
                 {
@@ -308,9 +308,6 @@ namespace MVCDHProject.Controllers
                 return RedirectToAction("DisplayMessages");
             }
         }
-
-        #endregion
-        #region XSS Cross-Site Scripting
 
         #endregion
 

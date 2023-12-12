@@ -16,6 +16,12 @@ namespace MVCDHProject.Controllers
                 ID = 1,
                 Name = "Rahul",
                 CommentName = "Hello World",
+            },
+            new Comment()
+            {
+                ID = 2,
+                Name = "Teja",
+                CommentName = "Hello Rahul",
             }
         };
         public IActionResult Index()

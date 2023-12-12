@@ -28,7 +28,6 @@ namespace MVCDHProject.Controllers
         {
             return View(obj.Customer_Select(Custid));
         }
-        [Authorize]
         public ViewResult AddCustomer()
         {
             return View();
@@ -39,7 +38,6 @@ namespace MVCDHProject.Controllers
             obj.Customer_Insert(customer);
             return RedirectToAction("DisplayCustomers");
         }
-        [Authorize]
         public ViewResult EditCustomer(int Custid)
         {
             return View(obj.Customer_Select(Custid));
@@ -49,7 +47,6 @@ namespace MVCDHProject.Controllers
             obj.Customer_Update(customer);
             return RedirectToAction("DisplayCustomers");
         }
-        [Authorize]
         public RedirectToActionResult DeleteCustomer(int Custid)
         {
             obj.Customer_Delete(Custid);
